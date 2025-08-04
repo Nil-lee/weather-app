@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2980b9, #6dd5fa);
+  font-family: sans-serif;
+  color: white;
+
+  /* 只用 flex 水平置中 */
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: flex-start; /* 靠上 */
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem 1rem;
+  margin-top: 3rem; /* 距離頂部3rem，你可以調整 */
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 搜尋區 */
+.search-box {
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  width: 200px;
+  margin-right: 0.5rem;
 }
 
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #ffffff;
+  color: #2980b9;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 訊息 */
+.message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.message.error {
+  color: #ff6666;
+}
+
+/* 天氣卡片 */
 .card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  min-width: 250px;
 }
